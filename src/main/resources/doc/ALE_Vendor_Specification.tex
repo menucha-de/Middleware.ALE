@@ -108,7 +108,7 @@
 
 \fancyfootoffset{5mm}
 \fancyfoot{}
-\lfoot{\footnotesize \it{Copyright \textcopyright  \textcolor{blue}{HARTING IT Software Development GmbH \& Co. KG.} All Rights Reserved.}}
+\lfoot{\footnotesize \it{Copyright \textcopyright  \textcolor{blue}{Menucha Team.} All Rights Reserved.}}
 \cfoot{}
 \rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}}
 
@@ -166,10 +166,10 @@
 \linenumbers
 \renewcommand{\arraystretch}{1.5}
 \ifpdf
-\includegraphics[width=400px]{img/harting.png}
+\includegraphics[width=400px]{img/logo.png}
 \else
 \begin{img}
-\input{img/harting.txt}
+\input{img/logo.txt}
 \end{img}
 \fi
 \hspace{1pt} 
@@ -178,11 +178,11 @@
 \large
 
 \subsection*{The Application Level Events (ALE) Vendor Specification\\
-Vendor HARTING IT Software Development GmbH \& Co KG\\
+Vendor Menucha Team\\
 Version 2.4.0}
 
 Project: Ha-VIS RF-R350 / Ha-VIS Middleware\\
-Document Owner: HARTING IT Software Development GmbH \& Co KG\\
+Document Owner: Menucha Team\\
 Document Date: 2019-07-01\\
 Document State: Approved
 
@@ -200,13 +200,13 @@ Document State: Approved
 \end {center}
 \bigskip
 {\color{blue}
-\copyright HARTING IT Software Development GmbH \& Co. KG,}\ifpdf\\\fi
+\copyright Menucha Team,}\ifpdf\\\fi
 {\color{blue} Espelkamp, Germany}\\
 
 {\color{blue}All rights are reserved, including those of the translation.
 No part of this document may be reproduced in any form (print, photocopy,
 microfilm or by any other method), processed, duplicated or distributed by
-means of electronic systems without the written permission of HARTING IT
+means of electronic systems without the written permission of Menucha Team
 Software Development GmbH \& Co. KG, Espelkamp, Germany.}\\
 
 {\color{blue}Subject to alterations without notice.}
@@ -303,10 +303,10 @@ XSD & XML Schema Definition\\
 \pagebreak
 
 \section{Introduction}
-This document specifies vendor extensions and implementation specific behavior of the ALE HARTING IT Software Development GmbH \& Co KG Vendor implementation of the ALE 1.1.1 standard specification. 
+This document specifies vendor extensions and implementation specific behavior of the ALE Menucha Team Vendor implementation of the ALE 1.1.1 standard specification. 
 
 \section{ALE Vendor Interfaces}
-The HARTING IT Software Development GmbH \& Co KG vendor specification for ALE defines two additional interfaces, as defined below.
+The Menucha Team vendor specification for ALE defines two additional interfaces, as defined below.
 
 \begin{table}[!h]
 \begin{tabularx}{\linewidth}{|R|R|X|}
@@ -332,7 +332,7 @@ Reader Configuration API&An interface through which clients may obtain configura
 See Section 4.1 of the ALE specification document.
 
 \subsection{Version Introspection Methods}
-Each of the two HARTING IT Software Development GmbH \& Co KG Vendor APIs includes a pair of methods having the following signature:
+Each of the two Menucha Team Vendor APIs includes a pair of methods having the following signature:
 
 \begin{bbox}
 \begin{edtable}{tabularx}{\linewidth}{|R|}
@@ -354,7 +354,7 @@ This ALE vendor implementation implements these methods for the Vendor APIs as s
 \multicolumn{1}{|c|}{\textbf{Method}}&
 \multicolumn{1}{c|}{\textbf{Description}}\\
 \hline
-\texttt{getStandardVersion}&Returns a string that identifies what version of the specification this implementation of the API complies with. The possible values for this string are defined by HARTING IT Software Development GmbH \& Co KG. The implementation returns a string corresponding to a version of this specification to which the API implementation fully complies, and returns the string corresponding to the latest version to which it complies. To indicate compliance with this version 1.1 of the ALE specification, the implementation returns the string 1.1.\\
+\texttt{getStandardVersion}&Returns a string that identifies what version of the specification this implementation of the API complies with. The possible values for this string are defined by Menucha Team. The implementation returns a string corresponding to a version of this specification to which the API implementation fully complies, and returns the string corresponding to the latest version to which it complies. To indicate compliance with this version 1.1 of the ALE specification, the implementation returns the string 1.1.\\
 \hline
 \texttt{getVendorVersion} &Returns a string that identifies what vendor extensions of the API this implementation provides. This implementation returns a non-empty string. The value returned is a URI where this ALE implementation is the owning authority. This URI is a HTTP URL which leads to a copy of this document.\\
 \hline
@@ -454,7 +454,7 @@ The interaction between an ALE client and an ALE implementation through the Digi
 \subsection{Execution of Event\ifincludecc and Command \fi Cycles}
 See section 5.6 of the ALE specification document.
 
-If the HARTING IT Software Development GmbH \& Co KG vendor implementation receives a second \texttt{poll} call for a spec for which there is already an outstanding \texttt{poll} call, and the second \texttt{poll} call specifies the same parameter values as the first, this ALE implementation satisfies the second \texttt{poll} call by initiating a new cycle.
+If the Menucha Team vendor implementation receives a second \texttt{poll} call for a spec for which there is already an outstanding \texttt{poll} call, and the second \texttt{poll} call specifies the same parameter values as the first, this ALE implementation satisfies the second \texttt{poll} call by initiating a new cycle.
 \fi
 
 \subsection{Execution of Port Cycles}
@@ -465,23 +465,23 @@ The execution of a port cycle is similar to the description of event cycle and c
 See Section 6 of the ALE specification document
 
 \subsection{	Build-in Fieldnames}
-This section defines the implementation depended behavior for fieldnames that are pre-defined by the ALE specification. The HARTING IT Software Development GmbH \& Co KG  vendor implementation recognizes each fieldname defined in section 6.1 of the ALE specification document and interprets it as defined in the specification. In addition, this ALE implementation implements the Tag Memory API and recognizes fieldnames defined through that API (see section 7 of the ALE specification document).
+This section defines the implementation depended behavior for fieldnames that are pre-defined by the ALE specification. The Menucha Team  vendor implementation recognizes each fieldname defined in section 6.1 of the ALE specification document and interprets it as defined in the specification. In addition, this ALE implementation implements the Tag Memory API and recognizes fieldnames defined through that API (see section 7 of the ALE specification document).
 
 \subsubsection{Type of Tags}
-When interacting with a Gen2 tag, the HARTING IT Software Development GmbH \& Co KG  vendor implementation behaves as specified in the ALE specification document section 6.1. When interacting with any other type of tag, this ALE implementation will not consider that tag and will exclude any tag types others then Gen2 from all reports.
+When interacting with a Gen2 tag, the Menucha Team  vendor implementation behaves as specified in the ALE specification document section 6.1. When interacting with any other type of tag, this ALE implementation will not consider that tag and will exclude any tag types others then Gen2 from all reports.
 
 \subsubsection{Memory Bank Fieldnames}
-The HARTING IT Software Development GmbH \& Co KG  vendor implementation recognizes any memory bank fieldnames that are specified in section 6.1 of the ALE specification document.\\
+The Menucha Team  vendor implementation recognizes any memory bank fieldnames that are specified in section 6.1 of the ALE specification document.\\
  This ALE implementation supports also reading or writing to the end of a memory bank therefore it will not raise an  ''operation not possible'' condition when an attempt is made to read from or write into the \texttt{epcBank, tidBank} or \texttt{userBank} field.
 
 \subsubsection{Variable Fieldnames}
-This HARTING IT Software Development GmbH \& Co KG  vendor implementation recognizes any string specified in sub-section 6.1.9.2 of the ALE specification document as a valid variable fieldname. This ALE implementation does not support those variable fieldnames for WRITE, READ, ADD and DELETE operations of the Writing API and for the Reading API, therefore an attempt to do so will always raise an ''operation not possible'' condition.
+This Menucha Team  vendor implementation recognizes any string specified in sub-section 6.1.9.2 of the ALE specification document as a valid variable fieldname. This ALE implementation does not support those variable fieldnames for WRITE, READ, ADD and DELETE operations of the Writing API and for the Reading API, therefore an attempt to do so will always raise an ''operation not possible'' condition.
 
 \subsection{Build-in Datatypes and Formats}
-This section defines the implementation depended behavior for datatypes and formats that are pre-defined by the ALE specification. The HARTING IT Software Development GmbH \& Co KG vendor implementation recognizes each datatype and format defined in section 6.2 of the ALE specification document and interprets it as defined in the specification. 
+This section defines the implementation depended behavior for datatypes and formats that are pre-defined by the ALE specification. The Menucha Team vendor implementation recognizes each datatype and format defined in section 6.2 of the ALE specification document and interprets it as defined in the specification. 
 
 \subsubsection{The \texttt{bits} Datatype}
-The HARTING IT Software Development GmbH \& Co KG  vendor implementation recognizes the string bits as a valid datatype as specified in section 6.2.3 of the ALE specification document.
+The Menucha Team  vendor implementation recognizes the string bits as a valid datatype as specified in section 6.2.3 of the ALE specification document.
 
 When writing a value of type bits, for this implementation the table 22 in sub-section 6.2.3.1 of the ALE specification document is used based on the number of bits in the bits value (M) and the number of bits in the field (N).
 
@@ -494,7 +494,7 @@ See Section 8 of the ALE specification document.
 See Section 8.2 of the ALE specification document.
 
 \begin{code}
-\emph{Note that the  HARTING IT Software Development GmbH \& Co KG  vendor implementation supports \texttt{primaryKeyFields} for all logical readers.This ALE implementation will therefore not raise an \texttt{ECSpecValidationException} if the \texttt{primaryKeyFields} parameter is specified.}
+\emph{Note that the  Menucha Team  vendor implementation supports \texttt{primaryKeyFields} for all logical readers.This ALE implementation will therefore not raise an \texttt{ECSpecValidationException} if the \texttt{primaryKeyFields} parameter is specified.}
 \end{code}
 
 \subsubsection{ECTrigger}
@@ -502,12 +502,12 @@ See Section 8.2 of the ALE specification document.
 
 See Section 8.2.4 of the ALE specification document.
 \paragraph{Real-time Clock Trigger}
-The HARTING IT Software Development GmbH \& Co KG  vendor implementation provides support for real-time clock trigger URIs as defined in section 8.2.4.1 of the ALE specification document.
+The Menucha Team  vendor implementation provides support for real-time clock trigger URIs as defined in section 8.2.4.1 of the ALE specification document.
 
 If the \texttt{timezone} parameter within a trigger of this form is omitted this ALE implementation choose the time zone configured in the operating system in which the implementation is running.
 
 \paragraph{HTTP Trigger}
-URIs beginning with the string \texttt{urn:havis:ale:trigger:http:} are reserved for triggers specified below. The HARTING IT Software Development GmbH \& Co KG  vendor implementation provides support for trigger URIs of this form. This ALE implementation conforms to the following specification for all such URIs valid according to the specification below.
+URIs beginning with the string \texttt{urn:havis:ale:trigger:http:} are reserved for triggers specified below. The Menucha Team  vendor implementation provides support for trigger URIs of this form. This ALE implementation conforms to the following specification for all such URIs valid according to the specification below.
 
 A HTTP trigger takes the following form:
 
@@ -560,7 +560,7 @@ HTTP Web Address:}
 \end{code}
 
 \paragraph{Port Trigger}
-URIs beginning with the string \texttt{urn:havis:ale:trigger:port:} are reserved for triggers specified below. The HARTING IT Software Development GmbH \& Co KG vendor implementation provides support for trigger URIs of this form. This ALE implementation conforms to the following specification for all such URIs valid according to the specification below.
+URIs beginning with the string \texttt{urn:havis:ale:trigger:port:} are reserved for triggers specified below. The Menucha Team vendor implementation provides support for trigger URIs of this form. This ALE implementation conforms to the following specification for all such URIs valid according to the specification below.
 
 A port trigger takes one of the three following forms:
 
@@ -630,7 +630,7 @@ This ALE implementation interprets a trigger of this form as follows. The trigge
 \end{code}
 
 \subsubsection{ECReportSetSpec}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation interprets an instance of  \texttt{ECReportSetSpec} as specified in section 8.2.6 of the ALE specification document.
+The Menucha Team vendor implementation interprets an instance of  \texttt{ECReportSetSpec} as specified in section 8.2.6 of the ALE specification document.
 
 \begin {code}
 \emph{Note that for the first event cycle to completed after the subscribe call for a given subscriber, and for a poll call, this ALE implementation refer ''the prior set of tags'' to the empty set.}
@@ -660,14 +660,14 @@ See Section 8.3 of the ALE specification document.
 \subsubsection{ECReaderStat}
 See section 8.3.10 of the ALE specification document.
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation adds one \texttt{ECReaderStat} for each reader to the \texttt{statBlocks} parameter list of an \texttt{ECTagStat} and the \texttt{ECTagStat} is included in an 
+The Menucha Team vendor implementation adds one \texttt{ECReaderStat} for each reader to the \texttt{statBlocks} parameter list of an \texttt{ECTagStat} and the \texttt{ECTagStat} is included in an 
 \ifpdf\\ \fi
 \texttt{ECReportGroupListMember} if the \texttt{ReaderNames} statistics profile was included in the corresponding \texttt{ECReportSpec}.
 
 The \texttt{readerName} parameter of the \texttt{ECReaderStat} refers to a logical reader name as named in the defining \texttt{ECSpec.}
 
 \subsubsection{ECTagCountStat}
-\texttt{ECTagCountStat} is a subclass of \texttt{ECTagStat}. The HARTING IT Software Development GmbH \& Co KG vendor implementation includes one \\\texttt{ECTagCountStat} in an \texttt{ECReportGroupListMember} if the \texttt{TagCount} statistics profile was included in the corresponding \texttt{ECReportSpec}.\\\texttt{ECTagCountStat} includes all of the fields in \texttt{ECTagStat}, plus the following additional fields:
+\texttt{ECTagCountStat} is a subclass of \texttt{ECTagStat}. The Menucha Team vendor implementation includes one \\\texttt{ECTagCountStat} in an \texttt{ECReportGroupListMember} if the \texttt{TagCount} statistics profile was included in the corresponding \texttt{ECReportSpec}.\\\texttt{ECTagCountStat} includes all of the fields in \texttt{ECTagStat}, plus the following additional fields:
 
 \begin{bbox}
 \begin{edtable}{tabularx}{\linewidth}{|X|}
@@ -718,7 +718,7 @@ This ALE implementation constructs an \texttt{ECTagCountStat} as follows:
 
 \subsubsection{ECSightingSignalStat}
 \label{subsec:ECSigh}
-\texttt{ECSightingSignalStat} is a subclass of \texttt{ECSightingStat}. The HARTING IT Software Development GmbH \& Co KG vendor implementation adds one \texttt{ECSightingSignalStat} for each sighting to the \texttt{sightings} parameter list of an \texttt{ECReaderStat}, an \texttt{ECReaderStat} is added for each reader to \texttt{statBlocks} parameter list of an \texttt{ECTagStat} and the \texttt{ECTagStat} is included in an \texttt{ECReportGroupListMember} if the \texttt{ReaderSightingSignals} statistics profile was included in the corresponding \texttt{ECReportSpec}.\\
+\texttt{ECSightingSignalStat} is a subclass of \texttt{ECSightingStat}. The Menucha Team vendor implementation adds one \texttt{ECSightingSignalStat} for each sighting to the \texttt{sightings} parameter list of an \texttt{ECReaderStat}, an \texttt{ECReaderStat} is added for each reader to \texttt{statBlocks} parameter list of an \texttt{ECTagStat} and the \texttt{ECTagStat} is included in an \texttt{ECReportGroupListMember} if the \texttt{ReaderSightingSignals} statistics profile was included in the corresponding \texttt{ECReportSpec}.\\
 An \texttt{ECSightingSignalStat} contains signal parameter information about a single sighting of a tag by a particular \texttt{antenna} of a particular \texttt{host}.\\
 \texttt{ECSightingSignalStat} includes all of the fields in \texttt{ECSightingStat}, plus the following additional fields:
 
@@ -774,20 +774,20 @@ See Section 9 of the ALE specification document.
 See Section 9.3 of the ALE specification document.
 
 \subsubsection{CCOpType}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation recognizes every CCOpType value as specified in section 9.3.5 of the ALE specification document.
+The Menucha Team vendor implementation recognizes every CCOpType value as specified in section 9.3.5 of the ALE specification document.
 
 \paragraph{CUSTOM Operation}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation recognizes CUSTOM as a \texttt{CCOpType}. For such operations, the fieldspec must be omitted and the data string in the \texttt{CCOpDataSpec} must be defined using the \texttt{bits} datatype and \texttt{hex} format. The data returned in the \texttt{CCOpReport} will also be formatted using the \texttt{bits} datatype and \texttt{hex} format.
+The Menucha Team vendor implementation recognizes CUSTOM as a \texttt{CCOpType}. For such operations, the fieldspec must be omitted and the data string in the \texttt{CCOpDataSpec} must be defined using the \texttt{bits} datatype and \texttt{hex} format. The data returned in the \texttt{CCOpReport} will also be formatted using the \texttt{bits} datatype and \texttt{hex} format.
 
 This operation essentially sends binary data to the reader, which in return answers with binary data. The specific binary data to send to the reader depends on the model of the reader and the tag used.
 
 \paragraph{CHECK Operation}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation recognizes the values \texttt{epcBank} and \texttt{userBank} as valid fieldspec values for the CHECK \texttt{CCOpType} as defined in section 9.3.5.1 of the ALE specification document. 
+The Menucha Team vendor implementation recognizes the values \texttt{epcBank} and \texttt{userBank} as valid fieldspec values for the CHECK \texttt{CCOpType} as defined in section 9.3.5.1 of the ALE specification document. 
 
 This ALE implementation supports the ISO 15962 standard in Data Format 9, for all other formats the CHECK operation will result in a \texttt{CCOpStatus} of\\ \texttt{OP\_NOT\_POSSIBLE\_ERROR}.
 
 \paragraph{INITIALIZE Operation}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation recognizes the values \texttt{epcBank} and \texttt{userBank} as valid fieldspec values for the INITIALIZE \texttt{CCOpType} as defined in section 9.3.5.2 of the ALE specification document. 
+The Menucha Team vendor implementation recognizes the values \texttt{epcBank} and \texttt{userBank} as valid fieldspec values for the INITIALIZE \texttt{CCOpType} as defined in section 9.3.5.2 of the ALE specification document. 
 
 This ALE implementation supports the ISO 15962 standard in Data Format 9, for all other formats the INITIALIZE operation will raise the ''operation not possible'' condition and this always results in a \texttt{CCOpStatus} of \texttt{OP\_NOT\_POSSIBLE\_ERROR}.
 
@@ -814,7 +814,7 @@ $<$<$\texttt{extension point}$>$>$\\
 \subsection{CCReports}
 See Section 9.4 of the ALE specification document.
 \subsubsection{CCTagTimestampStat}
-\texttt{CCTagTimestampStat} is a subclass of \texttt{CCTagStat}. The HARTING IT Software Development GmbH \& Co KG vendor implementation includes one \texttt{CCTagTimestampStat} in a \texttt{CCTagReport} if the \texttt{TagTimestamps} statistics profile was included in the corresponding \texttt{CCCmdSpec. CCTagTimestampStat} includes all of the fields in \texttt{CCTagStat}, plus the following additional fields:
+\texttt{CCTagTimestampStat} is a subclass of \texttt{CCTagStat}. The Menucha Team vendor implementation includes one \texttt{CCTagTimestampStat} in a \texttt{CCTagReport} if the \texttt{TagTimestamps} statistics profile was included in the corresponding \texttt{CCCmdSpec. CCTagTimestampStat} includes all of the fields in \texttt{CCTagStat}, plus the following additional fields:
 
 \begin{bbox}
 \begin{edtable}{tabularx}{\linewidth}{|X|}
@@ -867,7 +867,7 @@ This ALE implementation constructs a \texttt{CCTagTimestampStat} as follows:
 \FloatBarrier
 
 \subsubsection{CCTagCountStat}
-\texttt{CCTagCountStat} is a subclass of \texttt{CCTagStat}. The HARTING IT Software Development GmbH \& Co KG vendor implementation includes one\\ \texttt{CCTagCountStat} in a \texttt{CCTagReport} if the \texttt{TagCount} statistics profile was included in the corresponding \texttt{CCCmdSpec}. \texttt{CCTagCountStat} includes all of the fields in \texttt{CCTagStat}, plus the following additional fields
+\texttt{CCTagCountStat} is a subclass of \texttt{CCTagStat}. The Menucha Team vendor implementation includes one\\ \texttt{CCTagCountStat} in a \texttt{CCTagReport} if the \texttt{TagCount} statistics profile was included in the corresponding \texttt{CCCmdSpec}. \texttt{CCTagCountStat} includes all of the fields in \texttt{CCTagStat}, plus the following additional fields
 
 \begin{bbox}
 \begin{edtable}{tabularx}{\linewidth}{|X|}
@@ -901,7 +901,7 @@ This ALE implementation constructs a \texttt{CCTagCountStat} as follows:
 \FloatBarrier
 
 \subsection{Random Number Generator}
-This HARTING IT Software Development GmbH \& Co KG vendor implementation interprets an RNGSpec as specified in section 9.7.2 of the ALE specification document. This ALE implementation does not define extensions to that class in order to provide additional parameters to control the behavior of a random number generator.
+This Menucha Team vendor implementation interprets an RNGSpec as specified in section 9.7.2 of the ALE specification document. This ALE implementation does not define extensions to that class in order to provide additional parameters to control the behavior of a random number generator.
 \fi
 
 \section{ALE Logical Reader API}
@@ -910,17 +910,17 @@ This HARTING IT Software Development GmbH \& Co KG vendor implementation interpr
 
 See section 10.3 of the ALE specification document.
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation does not support to change the definition of a logical reader that is used by an \texttt{ECSpec\ifincludecc , CCSpec \fi} or \texttt{PCSpec} that is active at the time the change is requested. Therefore the \texttt{update, addReaders, setReaders, removeReaders}, and \texttt{setProperties} methods will raise an \texttt{InUseException} any time a client calls these methods for a logical reader that is in use by an active \texttt{ECSpec\ifincludecc , CCSpec \fi} or \texttt{PCSpec}. An \texttt{ImmutableReaderException} will be raised when trying to update, undefine or change properties of the Built-In reader (see \ref{par:builtin}).
+The Menucha Team vendor implementation does not support to change the definition of a logical reader that is used by an \texttt{ECSpec\ifincludecc , CCSpec \fi} or \texttt{PCSpec} that is active at the time the change is requested. Therefore the \texttt{update, addReaders, setReaders, removeReaders}, and \texttt{setProperties} methods will raise an \texttt{InUseException} any time a client calls these methods for a logical reader that is in use by an active \texttt{ECSpec\ifincludecc , CCSpec \fi} or \texttt{PCSpec}. An \texttt{ImmutableReaderException} will be raised when trying to update, undefine or change properties of the Built-In reader (see \ref{par:builtin}).
 
 \subsection{LRSpec}
 See section 10.4 of the ALE specification document.
 
-In addition the HARTING IT Software Development GmbH \& Co KG vendor implementation supports API-defined Base Reader for logical readers see section \ref{subsec:APIdef}. The implementation will therefore not raise a \\
+In addition the Menucha Team vendor implementation supports API-defined Base Reader for logical readers see section \ref{subsec:APIdef}. The implementation will therefore not raise a \\
 \texttt{ValidationException} if the \texttt{isComposite} parameter is false.
 
 \subsection{API-defined Base Reader}
 \label{subsec:APIdef}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation supports a mechanism to define a new base reader using the \texttt{define} method of the Logical Reader API. This ALE implementation uses the \texttt{properties} parameter of an \texttt{LRSpec} to forward information about the communication with a physical reader to the ALE. 
+The Menucha Team vendor implementation supports a mechanism to define a new base reader using the \texttt{define} method of the Logical Reader API. This ALE implementation uses the \texttt{properties} parameter of an \texttt{LRSpec} to forward information about the communication with a physical reader to the ALE. 
 
 Therefore the implementation specifies vendor specific properties and organized these properties in namespaces as specified in the below table.
 
@@ -982,7 +982,7 @@ The picture shows the interaction between event, command, port cycle instances a
 This ALE implementation recognizes the properties for each namespace as defined in the following four sub-sections.
 
 \subsubsection{Common Namespace}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation recognizes a set of \texttt{LRProperty} parameters, which an ALE client set using the \texttt{properties} parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API for the common namespace. This ALE implementation interprets these parameters as follows:
+The Menucha Team vendor implementation recognizes a set of \texttt{LRProperty} parameters, which an ALE client set using the \texttt{properties} parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API for the common namespace. This ALE implementation interprets these parameters as follows:
 
 \begin{table}[!h]
 \begin{tabularx}{\linewidth}{|l|X|}
@@ -1016,7 +1016,7 @@ The \texttt{define, update} and \texttt{setProperties} methods of the Logical Re
 \end{itemize}
 
 \subsubsection{Controller Namespace}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation recognizes a set of \texttt{LRProperty} parameters, which an ALE client set using the properties parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API for the controller namespace. This ALE implementation interprets these parameters as follows:
+The Menucha Team vendor implementation recognizes a set of \texttt{LRProperty} parameters, which an ALE client set using the properties parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API for the controller namespace. This ALE implementation interprets these parameters as follows:
 
 \begin{table}[!h]
 \begin{tabularx}{\textwidth}{|l|X|}
@@ -1045,7 +1045,7 @@ The \texttt{define, update} and \texttt{setProperties} methods of the Logical Re
 \end{itemize}
 
 \subsubsection{Connector Namespace}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation recognizes a set of \texttt{LRProperty} parameters, which an ALE client set using the \texttt{properties} parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API for the connector namespace. This ALE implementation interprets these parameters as follows:
+The Menucha Team vendor implementation recognizes a set of \texttt{LRProperty} parameters, which an ALE client set using the \texttt{properties} parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API for the connector namespace. This ALE implementation interprets these parameters as follows:
 
 \begin{table}[!h]
 \begin{tabular}{ 
@@ -1110,7 +1110,7 @@ The \texttt{define, update} and \texttt{setProperties} methods of the Logical Re
 Besides the default properties within the connector namespace each ''Connector'' implementation can define a set with additional properties in the connector namespace that are only interpret by this specific ''Connector''. The following sub section will describe these additional properties for the given reader connector implementations.
 
 \paragraph{LLRP Connector}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation provides support for physical readers that support the Low Level Reader Protocol (LLRP) for the communication between clients and the reader. The ALE implementation provides an LLRP connector implementation to handle the communication between the ALE and these readers based on LLRP. This connector type can be initialized, with the \texttt{LRProperty} parameter \texttt{ReaderType} with the value \texttt{LLRP}, using the \texttt{properties} parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API.
+The Menucha Team vendor implementation provides support for physical readers that support the Low Level Reader Protocol (LLRP) for the communication between clients and the reader. The ALE implementation provides an LLRP connector implementation to handle the communication between the ALE and these readers based on LLRP. This connector type can be initialized, with the \texttt{LRProperty} parameter \texttt{ReaderType} with the value \texttt{LLRP}, using the \texttt{properties} parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API.
 
 \begin{table}[!h]
 \begin{tabularx}{\textwidth}{|l|l|X|}
@@ -1152,7 +1152,7 @@ The LLRP Connector recognizes an additional set of \texttt{LRProperty} parameter
 \FloatBarrier
 
 \paragraph{RF-R Connector}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation provides support for all physical readers of the type HARTING RF-R. The ALE implementation provides connector implementations to handle the communication between the ALE and all supported RF-R readers. These connector types can be initialized according to the following table, using the properties parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API.
+The Menucha Team vendor implementation provides support for all physical readers of the type HARTING RF-R. The ALE implementation provides connector implementations to handle the communication between the ALE and all supported RF-R readers. These connector types can be initialized according to the following table, using the properties parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API.
 
 \begin{table}[!h]
 \begin{tabularx}{\textwidth}{|l|l|X|}
@@ -1226,13 +1226,13 @@ Value = 9	$ \boldsymbol{\rightarrow}$ Antenna No 1, 4\\
 \FloatBarrier
 
 \paragraph{Built-In Connector} \label{par:builtin}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation provides support for the built-in reader of the RFID Reader RF-R350. The ALE implementation provides a connector implementation to handle the communication between the ALE and the built-in reader. The ALE automatically detects the built-in reader and predefines the necessary \texttt{LRSpec} with the name \texttt{BuiltIn}. Both \texttt{getLogicalReaderNames} and \texttt{getLRSpec} will include the built-in reader.
+The Menucha Team vendor implementation provides support for the built-in reader of the RFID Reader RF-R350. The ALE implementation provides a connector implementation to handle the communication between the ALE and the built-in reader. The ALE automatically detects the built-in reader and predefines the necessary \texttt{LRSpec} with the name \texttt{BuiltIn}. Both \texttt{getLogicalReaderNames} and \texttt{getLRSpec} will include the built-in reader.
 
 The Built-In Connector currently supports no \texttt{LRProperty} parameters.
 
 
 \subsubsection{Reader Namespace}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation recognizes a set of \texttt{LRProperty} parameters, which an ALE client set using the \texttt{properties} parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API for the reader namespace.
+The Menucha Team vendor implementation recognizes a set of \texttt{LRProperty} parameters, which an ALE client set using the \texttt{properties} parameter of an \texttt{LRSpec} or the \texttt{setProperties} method of the Logical Reader API for the reader namespace.
 
 Properties within the reader namespace are ''Reader'' specific properties. Therefore each ''Reader'' type defines its own set of properties recognized within the reader namespace. These properties are used to configure the physical reader, each connector provides all configuration properties that are supported by the physical reader the specific connector was implemented for.
 
@@ -1249,7 +1249,7 @@ The \texttt{define, update} and \texttt{setProperties} methods of the Logical Re
 
 \subsection{Tag Smoothing}
 \label{subsec:TagSmoothing}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation does fully support tag smoothing as specified in section 10.6 of the ALE specification document for EC\ifincludecc , CC \fi and the PC API. Therefore this ALE implementation will not raise a \texttt{ValidationException} when a client sets the tag smoothing properties.
+The Menucha Team vendor implementation does fully support tag smoothing as specified in section 10.6 of the ALE specification document for EC\ifincludecc , CC \fi and the PC API. Therefore this ALE implementation will not raise a \texttt{ValidationException} when a client sets the tag smoothing properties.
 
 \subsection{Antenna Restriction}
 \label{subsec:Antenna}
@@ -1280,7 +1280,7 @@ The \texttt{define, update} and \texttt{setProperties} methods of the Logical Re
 \end{itemize}
 
 \section{Access Control API}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation does not support the ALE Access Control API specified in section 11 of the ALE specification document.
+The Menucha Team vendor implementation does not support the ALE Access Control API specified in section 11 of the ALE specification document.
 
 \section{ALE Digital Input and Output API}
 \label{subsec:ALEdigi}
@@ -2471,7 +2471,7 @@ where
 \item	 \texttt{remainder-of-URL} is the URL to which an HTTP POST operation will be directed.
 \end{itemize}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation delivers event cycle, command cycle or port cycle reports by sending an HTTP POST request to the callback receiver designated in the URI, where  \texttt{remainder-of-URL} is included in the HTTP \texttt{request-line}, and where the payload is the \texttt{ECReports} instance\ifincludecc , \texttt{CCReports} instance \fi or \texttt{PCReports} instance encoded in XML according to the schema.
+The Menucha Team vendor implementation delivers event cycle, command cycle or port cycle reports by sending an HTTP POST request to the callback receiver designated in the URI, where  \texttt{remainder-of-URL} is included in the HTTP \texttt{request-line}, and where the payload is the \texttt{ECReports} instance\ifincludecc , \texttt{CCReports} instance \fi or \texttt{PCReports} instance encoded in XML according to the schema.
 
 This ALE implementation does not interpret the response code value returned by the callback receiver. Therefore the implementation interprets any response code that is not null as a normal response, not indicative of any error.
 
@@ -2489,7 +2489,7 @@ where
 \item 	 \texttt{port} is the TCP port on which the callback receiver is listening for incoming TCP connections. 
 \end{itemize}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation delivers event cycle, command cycle or port cycle reports by opening a new TCP connection to the specified host and port, writing to the connection the \texttt{ECREports} instance\ifincludecc , \texttt{CCReports} instance \fi or \texttt{PCReports} instance, encoded in XML according to the schema and then closing the connection. The implementation does not require a reply or acknowledgement.
+The Menucha Team vendor implementation delivers event cycle, command cycle or port cycle reports by opening a new TCP connection to the specified host and port, writing to the connection the \texttt{ECREports} instance\ifincludecc , \texttt{CCReports} instance \fi or \texttt{PCReports} instance, encoded in XML according to the schema and then closing the connection. The implementation does not require a reply or acknowledgement.
 \fi
 
 \ifincludeudp
@@ -2506,7 +2506,7 @@ where
 \item 	 \texttt{port} is the UDP port on which the callback receiver is listening for incoming UDP data. 
 \end{itemize}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation delivers event cycle, command cycle or port cycle reports by directly writing the \texttt{ECREports} instance\ifincludecc , \texttt{CCReports} instance \fi or \texttt{PCReports} instance, encoded in XML according to the schema, to the UDP socket. The implementation does not require a reply or acknowledgement.
+The Menucha Team vendor implementation delivers event cycle, command cycle or port cycle reports by directly writing the \texttt{ECREports} instance\ifincludecc , \texttt{CCReports} instance \fi or \texttt{PCReports} instance, encoded in XML according to the schema, to the UDP socket. The implementation does not require a reply or acknowledgement.
 \fi
 
 \ifincludefile
@@ -2526,13 +2526,13 @@ where
 \item	 \texttt{DATETIME} is a placeholder within the \texttt{file} parameter which will be replaced by the current date time in format ''YYYYMMDDHHMMSSFF'' this results in a new file for every delivered report. If omitted only one file with the name of the file parameter will be used.
 \end{itemize}
 
-The HARTING IT Software Development GmbH \& Co KG implementation delivers an event cycle, command cycle or port cycle report by appending to the specified file within folder the \texttt{ECReports\ifincludecc , CCReports \fi} or \texttt{PCReports} instance encoded in XML according to the schema. The implementation will raise an \texttt{InvalidURIException} if the folder specified by the path parameter does not exists, if the file specified by the file parameter does not exists the implementation will create the file. If the DATETIME placeholder is used a new file will be created for every delivered \texttt{ECReports\ifincludecc , CCReports \fi} or \texttt{PCReports} instance instead of appending the report to a single file. Note that if DATETIME is omitted and more than one cycle completes, the file will contain a concatenation of XML documents, rather than a single XML document.
+The Menucha Team implementation delivers an event cycle, command cycle or port cycle report by appending to the specified file within folder the \texttt{ECReports\ifincludecc , CCReports \fi} or \texttt{PCReports} instance encoded in XML according to the schema. The implementation will raise an \texttt{InvalidURIException} if the folder specified by the path parameter does not exists, if the file specified by the file parameter does not exists the implementation will create the file. If the DATETIME placeholder is used a new file will be created for every delivered \texttt{ECReports\ifincludecc , CCReports \fi} or \texttt{PCReports} instance instead of appending the report to a single file. Note that if DATETIME is omitted and more than one cycle completes, the file will contain a concatenation of XML documents, rather than a single XML document.
 \fi
 \ifincludesql
 \subsection{SQL Binding}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation provides different SQL bindings of the \texttt{ALECallback\ifincludecc , ALECCCallback \fi} and \texttt{ALEPCCallback} interfaces for delivery of \texttt{ECReports\ifincludecc , CCReports \fi} or \texttt{PCReports}, in SQL statement via the an SQL INSERT operation. The following chapters will describe the different SQL bindings and in chapter \ref{subsec: SQLB} the mapping option for all these bindings will be described as well.
+The Menucha Team vendor implementation provides different SQL bindings of the \texttt{ALECallback\ifincludecc , ALECCCallback \fi} and \texttt{ALEPCCallback} interfaces for delivery of \texttt{ECReports\ifincludecc , CCReports \fi} or \texttt{PCReports}, in SQL statement via the an SQL INSERT operation. The following chapters will describe the different SQL bindings and in chapter \ref{subsec: SQLB} the mapping option for all these bindings will be described as well.
 
-The database drivers to access H2 databases are included in this implementation, all other drivers, e.g. MySQL, PostgreSQL or Microsoft SQL, must be installed manually. Please contact HARTING IT Software Development GmbH \& Co KG to request the necessary drivers. 
+The database drivers to access H2 databases are included in this implementation, all other drivers, e.g. MySQL, PostgreSQL or Microsoft SQL, must be installed manually. Please contact Menucha Team to request the necessary drivers. 
 
 The syntax for SQL notification URIs as used by this binding is defined below.
 Informally, a SQL URI has one of two the following forms:
@@ -2561,7 +2561,7 @@ where
 \item	 \texttt{ColumnMappingList} is a list of query parameters that will map specific information from an \texttt{ECReports\ifincludecc , CCReports \fi} or \texttt{PCReports} instance into the specified column within the table. This ALE implementation will interpret these parameters as defined in section \ref{subsec: SQLB}.
 \end{itemize}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation delivers event cycle, command cycle or port cycle reports by sending one or more INSERT operations to the specified table and columns within the database, and where the values are the \texttt{ECReports} instance\ifincludecc , \texttt{CCReports} instance \fi or \texttt{PCReports} instance information mapped on columns as specified through the URI see section \ref{subsec: SQLB} for mapping options.
+The Menucha Team vendor implementation delivers event cycle, command cycle or port cycle reports by sending one or more INSERT operations to the specified table and columns within the database, and where the values are the \texttt{ECReports} instance\ifincludecc , \texttt{CCReports} instance \fi or \texttt{PCReports} instance information mapped on columns as specified through the URI see section \ref{subsec: SQLB} for mapping options.
 
 \subsubsection{SQL Timeout Options}
 This ALE implementation provides no option to set a general socket or connect timeout for connections to remote databases. Please set the vendor specific socket or connect timeout parameter in the JDBC connection string.
@@ -2572,7 +2572,7 @@ This ALE implementation provides the two mapping options plain and column mappin
 \ifincludecc \texttt{CCReports} or \fi \texttt{PCOpReport} within a \texttt{PCReports}. The implementation recognizes the parameters defined in the next three sub-sections for the column mapping options.
 
 \paragraph{ECReports}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation provides SQL binding mapping parameters for \texttt{ECReports} as specified in the below table. 
+The Menucha Team vendor implementation provides SQL binding mapping parameters for \texttt{ECReports} as specified in the below table. 
 
 \begin{table}[!h]
 \begin{tabular}{
@@ -2653,7 +2653,7 @@ Through the notification URI each parameter could be assigned to a column within
 
 \ifincludecc
 \paragraph{CCReports}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation provides SQL binding mapping parameters for \texttt{CCReports} as specified in the below table. 
+The Menucha Team vendor implementation provides SQL binding mapping parameters for \texttt{CCReports} as specified in the below table. 
 
 \begin{table}[!h]
 \begin{tabular}{
@@ -2717,7 +2717,7 @@ Through the notification URI each parameter could be assigned to a column within
 \fi
 
 \paragraph{PCReports}
-The HARTING IT Software Development GmbH \& Co KG vendor implementation provides SQL binding mapping parameters for \texttt{PCReports} as specified in the below table. 
+The Menucha Team vendor implementation provides SQL binding mapping parameters for \texttt{PCReports} as specified in the below table. 
 
 \begin{table}[!h]
 \begin{tabular}{
@@ -2817,7 +2817,7 @@ where
 
 \end{itemize}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation delivers event cycle\ifincludecc , command cycle \fi or port cycle reports by executing a MQTT publish command to the specified MQTT Broker and topic, while the message will be encoded in JSON format.
+The Menucha Team vendor implementation delivers event cycle\ifincludecc , command cycle \fi or port cycle reports by executing a MQTT publish command to the specified MQTT Broker and topic, while the message will be encoded in JSON format.
 
 \fi
 \newpage
@@ -2826,7 +2826,7 @@ The HARTING IT Software Development GmbH \& Co KG vendor implementation delivers
 
 \section{ALE Web Service URLs}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation provides the following ALE web service URIs:
+The Menucha Team vendor implementation provides the following ALE web service URIs:
 
 \begin{bbox}
 \begin{edtable}{tabularx}{\linewidth}{|X|}
@@ -2875,7 +2875,7 @@ $<$<$\texttt{extension point}$>$>$\\
 \end{edtable}
 \end{bbox}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation implements the methods of the ALE Reader Configuration API as specified in the following table:
+The Menucha Team vendor implementation implements the methods of the ALE Reader Configuration API as specified in the following table:
 
 \begin{table}[!h]
 \ifpdf
@@ -2978,7 +2978,7 @@ $<$<$\texttt{extension point}$>$>$\\
 \end{edtable}
 \end{bbox}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation constructs an RCConfiguration as follows:
+The Menucha Team vendor implementation constructs an RCConfiguration as follows:
 
 \begin{table}[!h]
 \begin{tabularx}{\textwidth}{|l|l|X|}
@@ -3015,7 +3015,7 @@ $<$<$\texttt{extension point}$>$>$\\
 \end{edtable}
 \end{bbox}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation constructs an RCStyleSheet as follows:
+The Menucha Team vendor implementation constructs an RCStyleSheet as follows:
 
 \begin{table}[!h]
 \begin{tabularx}{\linewidth}{|l|l|X|}
@@ -3051,7 +3051,7 @@ $<$<$\texttt{extension point}$>$>$\\
 \end{edtable}
 \end{bbox}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation constructs an RCNode as follows:
+The Menucha Team vendor implementation constructs an RCNode as follows:
 
 \begin{table}[!h]
 \begin{tabularx}{\textwidth}{|l|l|X|}
@@ -3088,7 +3088,7 @@ $<$<$\texttt{extension point}$>$>$\\
 \end{edtable}
 \end{bbox}
 
-The HARTING IT Software Development GmbH \& Co KG vendor implementation constructs an RCProperty as follows:
+The Menucha Team vendor implementation constructs an RCProperty as follows:
 
 \begin{table}[!h]
 \begin{tabularx}{\linewidth}{|l|l|X|}
